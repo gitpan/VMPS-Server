@@ -16,11 +16,11 @@ itself, consult the Cisco web site:
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 SYNOPSIS
@@ -105,11 +105,6 @@ L<Net::Server>.
 =head1 AUTHOR
 
 kevin brintnall, C<< <kbrint at rufus.net> >>
-
-=head1 BUGS
-
-Please report any bugs or feature requests to C<bug-vmps-server at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=VMPS>.
 
 =head1 ACKNOWLEDGEMENTS
 
