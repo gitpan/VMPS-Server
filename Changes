@@ -1,5 +1,8 @@
 Revision history for VMPS
 
+0.03	2008-03-27
+	Corrected MANIFEST.
+
 0.02    2008-03-27
 	Added $VERSION to ::Packet for indexing.
 	Bumped to 0.02.
