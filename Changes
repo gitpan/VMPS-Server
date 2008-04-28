@@ -1,5 +1,8 @@
 Revision history for VMPS
 
+0.04	2008-04-28
+	Handle case where sub-class does not return a VMPS::Packet
+
 0.03	2008-03-27
 	Corrected MANIFEST.
 

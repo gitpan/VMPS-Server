@@ -16,11 +16,11 @@ itself, consult the Cisco web site:
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 
 =head1 SYNOPSIS
@@ -83,6 +83,10 @@ sub process_request {
 
     eval {
         my $reply = $this->vmps_request($request, $client);
+
+        $reply = $request->reject
+            unless ($reply and UNIVERSAL::isa($reply, 'VMPS::Packet'));
+
         my $reply_pkt = $reply->_encode;
         $this->{server}{client}->send($reply_pkt);
     };

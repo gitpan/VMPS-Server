@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use base qw[ Exporter ];
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Net::MAC;
 use Storable qw[ dclone ];
@@ -251,9 +251,11 @@ sub reply {
 
 =head1 GENERATING REPLIES MADE EASY
 
-=head2 reject()
+=head2 reject
 
 Create a response object that rejects the request.
+
+    my $reply = $request->reject();
 
 =cut
 
@@ -261,9 +263,11 @@ sub reject { shift->reply(VMPS_ERROR_ACCESS_DENIED) }
 
 ###################################
 
-=head2 accept($vlan)
+=head2 accept
 
 Accept the request, assign the user to the specified VLAN name.
+
+    my $reply = $request->accept($vlan);
 
 =cut
 
@@ -271,9 +275,11 @@ sub accept { shift->reply(VMPS_ERROR_NONE, shift) }
 
 ###################################
 
-=head2 shutdown()
+=head2 shutdown
 
 Reject the request; instruct the switch to shutdown the port.
+
+    my $reply = $request->shutdown();
 
 =cut
 
@@ -281,9 +287,11 @@ sub shutdown { shift->reply(VMPS_ERROR_SHUTDOWN) }
 
 ###################################
 
-=head2 wrong_domain()
+=head2 wrong_domain
 
 Reject the request because it is from the wrong domain.
+
+    my $reply = $request->wrong_domain();
 
 =cut
 
